@@ -64,6 +64,7 @@
 		171368E12A669B8800D96EBA /* DetailExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExpensesView.swift; sourceTree = "<group>"; };
 		17A6764E2A67BBA50097EE63 /* SalesPerBookCategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesPerBookCategoryHeaderView.swift; sourceTree = "<group>"; };
 		17A676502A67C9160097EE63 /* ChartAxisExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartAxisExampleView.swift; sourceTree = "<group>"; };
+		17A676532A67D2120097EE63 /* Screen Recording 2023-07-19 at 11.09.14.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Screen Recording 2023-07-19 at 11.09.14.mp4"; sourceTree = "<group>"; };
 		17DCEE342A66D3720068F6E4 /* DailySalesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySalesChartView.swift; sourceTree = "<group>"; };
 		17DCEE362A66D37D0068F6E4 /* WeeklySalesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySalesChartView.swift; sourceTree = "<group>"; };
 		17DCEE382A66D3850068F6E4 /* MonthlySalesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlySalesChartView.swift; sourceTree = "<group>"; };
@@ -145,9 +146,18 @@
 			path = "expenses stats";
 			sourceTree = "<group>";
 		};
+		17A676522A67D20C0097EE63 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				17A676532A67D2120097EE63 /* Screen Recording 2023-07-19 at 11.09.14.mp4 */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		17E677CE2A63E678000E6904 = {
 			isa = PBXGroup;
 			children = (
+				17A676522A67D20C0097EE63 /* images */,
 				17E677D92A63E678000E6904 /* BookstoreStategist */,
 				17E677D82A63E678000E6904 /* Products */,
 			);
