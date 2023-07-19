@@ -31,7 +31,7 @@ struct Sale: Identifiable, Equatable {
         Sale(id: UUID(), book: Book.examples[9], quantity: 4, saleDate: Date(timeIntervalSinceNow: -72_000_000))
     ]
     
-    static var threeMonthsExamples: [Sale] = {
+    static func threeMonthsExamples() -> [Sale]  {
         let threeMonthsAgo = Calendar.current.date(byAdding: .month, value: -3, to: Date())!
 
         let exampleSales: [Sale] = (1...300).map { _ in
@@ -43,7 +43,7 @@ struct Sale: Identifiable, Equatable {
         }
         
         return exampleSales.sorted { $0.saleDate < $1.saleDate }
-    }()
+    }
     
     static var higherWeekendThreeMonthsExamples: [Sale] = {
         let threeMonthsAgo = Calendar.current.date(byAdding: .month, value: -3, to: Date())!

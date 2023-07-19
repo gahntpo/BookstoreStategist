@@ -43,7 +43,20 @@ struct SalesPerBookCategoryView: View {
                     SalesPerBookCategoryStackedBarChartView(salesViewModel: salesViewModel)
             }
             
-           
+            // dynamically changing the chart data with an animation
+            Button(action: {
+                // fetch from server instead
+                withAnimation {
+                    salesViewModel.salesData = Sale.threeMonthsExamples()
+                }
+                
+            }, label: {
+                Label("Refresh", systemImage: "arrow.triangle.2.circlepath")
+                
+            })
+            .padding(.top, 50)
+            
+            
            Spacer()
           //  SalesPerBookCategoryListView(salesViewModel: salesViewModel)
         } .padding()

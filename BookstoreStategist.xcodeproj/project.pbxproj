@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1710DBA62A682DFA005D0EB4 /* ExpensesBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710DBA52A682DFA005D0EB4 /* ExpensesBarChartView.swift */; };
 		171368BE2A65280000D96EBA /* SalesByWeekdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171368BD2A65280000D96EBA /* SalesByWeekdayView.swift */; };
 		171368C02A65377700D96EBA /* SalesPerBookCategoryPieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171368BF2A65377700D96EBA /* SalesPerBookCategoryPieChartView.swift */; };
 		171368C32A65593300D96EBA /* SalesPerBookCategoryBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171368C22A65593300D96EBA /* SalesPerBookCategoryBarChartView.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1710DBA52A682DFA005D0EB4 /* ExpensesBarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesBarChartView.swift; sourceTree = "<group>"; };
 		171368BD2A65280000D96EBA /* SalesByWeekdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesByWeekdayView.swift; sourceTree = "<group>"; };
 		171368BF2A65377700D96EBA /* SalesPerBookCategoryPieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesPerBookCategoryPieChartView.swift; sourceTree = "<group>"; };
 		171368C22A65593300D96EBA /* SalesPerBookCategoryBarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesPerBookCategoryBarChartView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				171368DD2A66948700D96EBA /* SimpleExpensesLineChartView.swift */,
 				171368E12A669B8800D96EBA /* DetailExpensesView.swift */,
 				171368D92A666C4900D96EBA /* ExpensesLineChartView.swift */,
+				1710DBA52A682DFA005D0EB4 /* ExpensesBarChartView.swift */,
 				17A676502A67C9160097EE63 /* ChartAxisExampleView.swift */,
 				171368DF2A66983200D96EBA /* ExpensesDetailGridView.swift */,
 				171368DB2A666D8800D96EBA /* ExpenseListView.swift */,
@@ -328,6 +331,7 @@
 				171368D72A66688300D96EBA /* ExpenseViewModel.swift in Sources */,
 				17A6764F2A67BBA50097EE63 /* SalesPerBookCategoryHeaderView.swift in Sources */,
 				171368D52A659DBA00D96EBA /* MaxMinSalesViewModel.swift in Sources */,
+				1710DBA62A682DFA005D0EB4 /* ExpensesBarChartView.swift in Sources */,
 				171368D12A65752E00D96EBA /* SalesByWeekdayLineChartView.swift in Sources */,
 				17E677DB2A63E678000E6904 /* BookstoreStategistApp.swift in Sources */,
 				17E677FB2A63EBB2000E6904 /* DetailBookSalesView.swift in Sources */,
