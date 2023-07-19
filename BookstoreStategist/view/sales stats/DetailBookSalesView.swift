@@ -36,27 +36,19 @@ struct DetailBookSalesView: View {
                 Text(" in the last 90 days.")
             }.padding(.vertical)
             
-            //TODO: make scrollable
-            switch selectedTimeInterval {
-                case .day:
-                    DailySalesChartView(salesData: salesViewModel.salesData)
-                case .week:
-                    WeeklySalesChartView(salesViewModel: salesViewModel)
-                case .month:
-                   MonthlySalesChartView(salesViewModel: salesViewModel)
-            }
-            
-            List {
-                ForEach(salesViewModel.books) { book in
-                    HStack(alignment: .firstTextBaseline) {
-                        Text(book.title)
-                        Text(book.category.rawValue)
-                        Spacer()
-                        Text("\(salesViewModel.sales(for: book)) sales")
-                    }
-                    
+            Group {
+                switch selectedTimeInterval {
+                    case .day:
+                        DailySalesChartView(salesData: salesViewModel.salesData)
+                    case .week:
+                        WeeklySalesChartView(salesViewModel: salesViewModel)
+                    case .month:
+                        MonthlySalesChartView(salesViewModel: salesViewModel)
                 }
             }
+            .aspectRatio(0.8, contentMode: .fit)
+            
+            Spacer()
         }
         .padding()
     }

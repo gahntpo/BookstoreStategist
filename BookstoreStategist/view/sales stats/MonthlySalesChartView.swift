@@ -6,13 +6,25 @@
 //
 
 import SwiftUI
+import Charts
 
 struct MonthlySalesChartView: View {
+    
+    @ObservedObject var salesViewModel: SalesViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Chart(salesViewModel.salesByMonth, id: \.day) {
+            BarMark(
+                x: .value("Month", $0.day, unit: .month),
+                y: .value("Sales", $0.sales)
+            )
+            .foregroundStyle(.blue.gradient)
+        }
     }
 }
 
 #Preview {
-    MonthlySalesChartView()
+    MonthlySalesChartView(salesViewModel: .preview)
+        .aspectRatio(1, contentMode: .fit)
+        .padding()
 }

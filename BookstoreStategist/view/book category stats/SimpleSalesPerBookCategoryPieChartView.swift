@@ -13,15 +13,10 @@ struct SimpleSalesPerBookCategoryPieChartView: View {
   
     var body: some View {
         
-        HStack {
+        HStack(spacing: 30) {
             
-            if let bestSellingCategory = salesViewModel.bestSellingCategory {
-                Text("Your best selling category is ") + Text("\(bestSellingCategory.category.displayName)").bold().foregroundStyle(.blue) +
-                Text(" with ") +
-                Text("\(bestSellingCategory.sales) sales ").bold() +
-                Text("in the last 90 days.")
-                   
-            }
+            SalesPerBookCategoryHeaderView(selectedChartStyle: .pie,
+                                           salesViewModel: salesViewModel)
             
             Chart(salesViewModel.totalSalesPerCategory, id: \.category) { data in
                 SectorMark(
