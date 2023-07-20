@@ -16,20 +16,23 @@ struct SimpleSalesPerBookCategoryPieChartView: View {
             SalesPerBookCategoryHeaderView(selectedChartStyle: .pie,
                                            salesViewModel: salesViewModel)
             
-            Chart(salesViewModel.totalSalesPerCategory, id: \.category) { data in
-                SectorMark(
-                    angle: .value("Sales", data.sales),
-                    innerRadius: .ratio(0.618),
-                    angularInset: 1.5
-                )
-                .cornerRadius(5.0)
-                .opacity(data.category == salesViewModel.bestSellingCategory?.category ? 1 : 0.3)
+            if #available(macOS 14.0, *) {
+                Chart(salesViewModel.totalSalesPerCategory, id: \.category) { data in
+                    SectorMark(
+                        angle: .value("Sales", data.sales),
+                        innerRadius: .ratio(0.618),
+                        angularInset: 1.5
+                    )
+                    .cornerRadius(5.0)
+                    .opacity(data.category == salesViewModel.bestSellingCategory?.category ? 1 : 0.3)
+                }
+                .aspectRatio(1, contentMode: .fit)
+                .frame(height: 75)
             }
-            .aspectRatio(1, contentMode: .fit)
-            .frame(height: 75)
         }
     }
 }
+
 
 #Preview {
     SimpleSalesPerBookCategoryPieChartView(salesViewModel: .preview)

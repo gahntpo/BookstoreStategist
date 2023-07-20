@@ -32,16 +32,25 @@ struct DetailBookSalesView: View {
             
             Group {
                 Text("You sold ") +
-                Text("\(salesViewModel.totalSales) books").bold().foregroundStyle(Color.accentColor) +
+                Text("\(salesViewModel.totalSales) books").bold().foregroundColor(Color.accentColor) +
                 Text(" in the last 90 days.")
             }.padding(.vertical)
             
             Group {
                 switch selectedTimeInterval {
                     case .day:
-                        DailySalesChartView(salesData: salesViewModel.salesData)
+                        if #available(macOS 14.0, *) {
+                            DailySalesChartView(salesData: salesViewModel.salesData)
+                        } else {
+                            Text("scrollable charts only available for macOS 14 and iOS 17")
+                        }
                     case .week:
-                        WeeklySalesChartView(salesViewModel: salesViewModel)
+                        if #available(macOS 14.0, *) {
+                            WeeklySalesChartView(salesViewModel: salesViewModel)
+                        } else {
+                            Text("selection in charts only available for macOS 14 and iOS 17")
+                        }
+                        
                     case .month:
                         MonthlySalesChartView(salesViewModel: salesViewModel)
                 }

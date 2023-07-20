@@ -38,7 +38,11 @@ struct SalesPerBookCategoryView: View {
                 case .bar:
                     SalesPerBookCategoryBarChartView(salesViewModel: salesViewModel)
                 case .pie:
-                    SalesPerBookCategoryPieChartView(salesViewModel: salesViewModel)
+                    if #available(macOS 14.0, *) {
+                        SalesPerBookCategoryPieChartView(salesViewModel: salesViewModel)
+                    } else {
+                        Text("Pie charts only available for macOS 14 and iOS 17")
+                    }
                 case .singleBar:
                     SalesPerBookCategoryStackedBarChartView(salesViewModel: salesViewModel)
             }

@@ -18,7 +18,7 @@ struct SimpleExpensesLineChartView: View {
             Text("Your total expenses for the last year are ") +
             Text("$\(String(format: "%.2f", expensesViewModel.totalExpenses)).")
                 .bold()
-                .foregroundStyle(.pink)
+                .foregroundColor(Color.pink)
             
             Chart {
                 Plot {
@@ -48,6 +48,7 @@ struct SimpleExpensesLineChartView: View {
     }
     
 }
+
 
 #Preview {
     SimpleExpensesLineChartView(expensesViewModel: .preview)

@@ -8,6 +8,7 @@
 import SwiftUI
 import Charts
 
+@available(macOS 14.0, *)
 struct DailySalesChartView: View {
     
     let salesData: [Sale]
@@ -68,6 +69,7 @@ struct DailySalesChartView: View {
     }
 }
 
+@available(macOS 14.0, *)
 #Preview {
     DailySalesChartView(salesData: SalesViewModel.preview.salesData)
         .aspectRatio(1, contentMode: .fit)

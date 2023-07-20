@@ -8,6 +8,7 @@
 import SwiftUI
 import Charts
 
+@available(macOS 14.0, iOS 17, *)
 struct WeeklySalesChartView: View {
     
     @ObservedObject var salesViewModel: SalesViewModel
@@ -93,6 +94,7 @@ struct WeeklySalesChartView: View {
     }
 }
 
+@available(macOS 14.0, iOS 17, *)
 #Preview {
     WeeklySalesChartView(salesViewModel: .preview)
         .aspectRatio(1, contentMode: .fit)

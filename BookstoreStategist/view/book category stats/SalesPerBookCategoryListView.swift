@@ -14,7 +14,7 @@ struct SalesPerBookCategoryListView: View {
     var body: some View {
         List {
             ForEach(salesViewModel.totalSalesPerCategory, id: \.category) { data in
-                Section(isExpanded: .constant(true)) {
+                Section {
                     ForEach(salesViewModel.findBooks(for: data.category)) { book in
                         Text(book.title)
                             .badge(salesViewModel.sales(for: book))

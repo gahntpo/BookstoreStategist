@@ -35,7 +35,7 @@ struct MonthlySalesChartView: View {
                 x: .value("Month", $0.saleDate, unit: .month),
                 y: .value("Sales", $0.quantity)
             )
-            .foregroundStyle(.blue.gradient)
+            .foregroundStyle(.blue)
         }
         .chartXAxis {
             AxisMarks(values: .stride(by: .month)) { _ in

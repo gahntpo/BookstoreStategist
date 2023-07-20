@@ -8,6 +8,7 @@
 import SwiftUI
 import Charts
 
+@available(macOS 14.0, *)
 struct SalesPerBookCategoryPieChartView: View {
     
     @ObservedObject var salesViewModel: SalesViewModel
@@ -26,7 +27,7 @@ struct SalesPerBookCategoryPieChartView: View {
         }
         .chartLegend(alignment: .center, spacing: 18)
         .aspectRatio(1, contentMode: .fit)
-        /*
+        
         .chartBackground { chartProxy in
             GeometryReader { geometry in
                 let frame = geometry[chartProxy.plotFrame!]
@@ -48,10 +49,11 @@ struct SalesPerBookCategoryPieChartView: View {
                 }
             }
         }
-         */
+         
     }
 }
 
+@available(macOS 14.0, *) 
 #Preview {
     SalesPerBookCategoryPieChartView(salesViewModel: .preview)
 }

@@ -17,7 +17,7 @@ struct SalesPerBookCategoryHeaderView: View {
             case .pie, .singleBar:
                 if let bestSellingCategory = salesViewModel.bestSellingCategory,
                    let bestsellingCategoryPercentage  {
-                    Text("Your best selling category is ") + Text("\(bestSellingCategory.category.displayName)").bold().foregroundStyle(.blue) +
+                    Text("Your best selling category is ") + Text("\(bestSellingCategory.category.displayName)").bold().foregroundColor(.blue) +
                     Text(" with ") +
                     Text("\(bestsellingCategoryPercentage)").bold() +
                     Text(" of all sales.")
@@ -26,7 +26,7 @@ struct SalesPerBookCategoryHeaderView: View {
                 
             case .bar:
                 if let bestSellingCategory = salesViewModel.bestSellingCategory {
-                    Text("Your best selling category is ") + Text("\(bestSellingCategory.category.displayName)").bold().foregroundStyle(.blue) +
+                    Text("Your best selling category is ") + Text("\(bestSellingCategory.category.displayName)").bold().foregroundColor(.blue) +
                     Text(" with ") +
                     Text("\(bestSellingCategory.sales) sales ").bold() +
                     Text("in the last 90 days.")

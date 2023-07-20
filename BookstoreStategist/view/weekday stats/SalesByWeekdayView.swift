@@ -25,7 +25,7 @@ struct SalesByWeekdayView: View {
         VStack(alignment: .leading) {
             if let highestSellingWeekday = salesViewModel.highestSellingWeekday {
                 Text("Your highest selling day of the week is ") +
-                Text("\(longWeekday(for: highestSellingWeekday.number))").bold().foregroundStyle(.blue) +
+                Text("\(longWeekday(for: highestSellingWeekday.number))").bold().foregroundColor(.blue) +
                      Text(" with an average of ") +
                 Text("\(Int(highestSellingWeekday.sales)) sales per day.").bold()
             }
