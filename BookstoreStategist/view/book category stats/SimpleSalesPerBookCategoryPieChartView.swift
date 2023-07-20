@@ -12,9 +12,7 @@ struct SimpleSalesPerBookCategoryPieChartView: View {
     @ObservedObject var salesViewModel: SalesViewModel
   
     var body: some View {
-        
         HStack(spacing: 30) {
-            
             SalesPerBookCategoryHeaderView(selectedChartStyle: .pie,
                                            salesViewModel: salesViewModel)
             
@@ -27,7 +25,6 @@ struct SimpleSalesPerBookCategoryPieChartView: View {
                 .cornerRadius(5.0)
                 .opacity(data.category == salesViewModel.bestSellingCategory?.category ? 1 : 0.3)
             }
-            .chartLegend(alignment: .center, spacing: 18)
             .aspectRatio(1, contentMode: .fit)
             .frame(height: 75)
         }

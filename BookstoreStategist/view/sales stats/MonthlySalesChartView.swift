@@ -8,10 +8,8 @@
 import SwiftUI
 import Charts
 
-struct MonthlySalesChartView: View {
-    
+struct CalculatedMonthlySalesChartView: View {
     @ObservedObject var salesViewModel: SalesViewModel
-    
     var body: some View {
         Chart(salesViewModel.salesByMonth, id: \.day) {
             BarMark(
@@ -23,8 +21,38 @@ struct MonthlySalesChartView: View {
     }
 }
 
+// you can simple give all data to the chart
+// tell it to use a unit of month
+// and it automically collects all data points for each month
+
+struct MonthlySalesChartView: View {
+    
+    @ObservedObject var salesViewModel: SalesViewModel
+    
+    var body: some View {
+        Chart(salesViewModel.salesData) {
+            BarMark(
+                x: .value("Month", $0.saleDate, unit: .month),
+                y: .value("Sales", $0.quantity)
+            )
+            .foregroundStyle(.blue.gradient)
+        }
+        .chartXAxis {
+            AxisMarks(values: .stride(by: .month)) { _ in
+                AxisGridLine()
+                AxisTick()
+                AxisValueLabel(format: .dateTime.month(.abbreviated), centered: true)
+            }
+        }
+    }
+}
+
 #Preview {
-    MonthlySalesChartView(salesViewModel: .preview)
-        .aspectRatio(1, contentMode: .fit)
+    VStack{
+        MonthlySalesChartView(salesViewModel: .preview)
+            .aspectRatio(1, contentMode: .fit)
+        
+        CalculatedMonthlySalesChartView(salesViewModel: .preview)
+    }
         .padding()
 }

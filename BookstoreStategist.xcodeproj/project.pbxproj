@@ -98,6 +98,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1710DBA72A690559005D0EB4 /* basics tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				1710DBAE2A690DA2005D0EB4 /* pet statistics */,
+				1710DBC12A69143A005D0EB4 /* chart types */,
+			);
+			path = "basics tutorial";
+			sourceTree = "<group>";
+		};
+		1710DBAE2A690DA2005D0EB4 /* pet statistics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "pet statistics";
+			sourceTree = "<group>";
+		};
+		1710DBC12A69143A005D0EB4 /* chart types */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "chart types";
+			sourceTree = "<group>";
+		};
 		171368C12A65591C00D96EBA /* book category stats */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +246,7 @@
 		17E677F92A63EBA4000E6904 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				1710DBA72A690559005D0EB4 /* basics tutorial */,
 				171368CD2A6561B800D96EBA /* sales stats */,
 				171368C82A655F0300D96EBA /* weekday stats */,
 				171368C12A65591C00D96EBA /* book category stats */,
