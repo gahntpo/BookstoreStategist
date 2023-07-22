@@ -7,7 +7,11 @@ There are various chart examples:
 - pie charts
 - line charts
 - scatter plots
-  
+
+### Tutorials
+This is the demo I created for
+- Youtube tutorial [Introduction to SwiftCharts: Creating Charts and Graphs in SwiftUI](https://youtu.be/mnH7YRmuVKw)
+- blog post https://www.swiftyplace.com/blog/swiftcharts-create-charts-and-graphs-in-swiftui
 
 https://github.com/gahntpo/BookstoreStategist/assets/53653631/33e0fbbd-7610-41a9-b187-87a865bedfe3
 
